@@ -131,3 +131,9 @@ dmypy.json
 # IDEs
 .idea/
 .vscode/
+
+# Local temp files
+log.html
+output.xml
+report.html
+tests/_docu/
