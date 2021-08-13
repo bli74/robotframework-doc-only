@@ -52,7 +52,7 @@ setup(
     entry_points={
         'console_scripts': [
             "testdoc_small = robot_doc_only.testdoc:create_testdoc_small",
-            "testdoc_full = robot_doc_only.testdoc:create_testdoc_small"
+            "testdoc_full = robot_doc_only.testdoc:create_testdoc_full"
         ]
     }
 )

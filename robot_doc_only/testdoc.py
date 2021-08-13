@@ -13,7 +13,7 @@ else:
 def create_testdoc_small():
     rc = TestDocSmall().execute_cli(argv[1:])
 
-def create_testdoc_fullll():
+def create_testdoc_full():
     rc = TestDoc().execute_cli(argv[1:])
 
 # Press the green button in the gutter to run the script.
