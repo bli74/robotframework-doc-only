@@ -12,7 +12,8 @@ exec(open(filename).read())
 
 setup_requires_packages: list = ['wheel']
 install_requires_packages: list = [
-    'robotframework>=3.2.2'
+    'robotframework>=3.2.2',
+    'packaging>=20.0'
 ]
 
 setup(

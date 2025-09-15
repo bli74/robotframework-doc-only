@@ -1,11 +1,11 @@
 from sys import argv
-from distutils.version import StrictVersion
+from packaging.version import Version
 from robot.testdoc import TestDoc
 
 from robot.version import get_version as get_robot_version
 robot_version = get_robot_version()
 
-if StrictVersion(robot_version) < StrictVersion('4.0'):
+if Version(robot_version) < Version('4.0'):
     from .testdoc_322 import TestDocSmall
 else:
     from .testdoc_400 import TestDocSmall

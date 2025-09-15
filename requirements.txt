@@ -1,1 +1,2 @@
 robotframework>=3.2.2
+packaging>=20.0
