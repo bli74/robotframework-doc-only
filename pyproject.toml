@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robotframework-doc-only"
+dynamic = ["version"]
+description = "Create test documentation without technical details"
+readme = "README.md"
+license = {text = "Apache License 2.0"}
+authors = [{name = "Bert Lindemann", email = "bert.lindemann@gmail.com"}]
+maintainers = [{name = "Bert Lindemann", email = "bert.lindemann@gmail.com"}]
+keywords = ["robotframework"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Framework :: Robot Framework",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Quality Assurance",
+    "Intended Audience :: Developers",
+]
+requires-python = ">=3.6"
+dependencies = [
+    "robotframework>=3.2.2",
+    "packaging>=20.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/bli74/robotframework-doc-only/"
+Repository = "https://github.com/bli74/robotframework-doc-only/"
+
+[project.scripts]
+testdoc_small = "robot_doc_only.testdoc:create_testdoc_small"
+testdoc_full = "robot_doc_only.testdoc:create_testdoc_full"
+
+[tool.setuptools.dynamic]
+version = {attr = "robot_doc_only.version.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["robot_doc_only*"]
